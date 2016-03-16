@@ -50,8 +50,7 @@ public class CrimeFragment extends Fragment {
         });
 
         mDateButton = (Button) v.findViewById(R.id.crime_date);
-        DateFormat dateFormat = new DateFormat();
-        mDateButton.setText(dateFormat.format("EEEE, MMM dd, yyyy", mCrime.getDate()));
+        mDateButton.setText(DateFormat.getDateFormat(getActivity()).format(mCrime.getDate()));
         mDateButton.setEnabled(false);
 
         mSolvedCheckBox = (CheckBox) v.findViewById(R.id.crime_solved);
